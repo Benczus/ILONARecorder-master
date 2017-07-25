@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".IlonaActivity"
+    tools:showIn="@layout/activity_ilona">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_coord1"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="@string/magneto_xaxis"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_coord2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/magneto_yaxis"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_coord3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/magneto_zaxis"
+                android:inputType="number" />
+<!--
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/UID"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/passwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/PASS"
+                android:inputType="textPassword" />
+-->
+            <Spinner
+                android:id="@+id/zone_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_floating_material_light"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getPosition"
+                android:text="@string/get_position" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="receiveMeasurement"
+                android:text="@string/getvalues" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:onClick="sendToServer"
+                android:text="@string/sendresults" />
+<!--
+            <Button
+                android:id="@+id/authButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sendToTracking"
+                android:text="@string/sendToTracking" />
+    -->
+            <TextView
+                android:id="@+id/zoneTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zone" />
+
+            <TextView
+                android:id="@+id/coordsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coordiantes" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
